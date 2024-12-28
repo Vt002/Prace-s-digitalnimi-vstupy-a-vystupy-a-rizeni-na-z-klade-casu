@@ -24,8 +24,23 @@ Práce s digitálními vstupy a výstupy a řízení (ovládání) na základě 
 
 ## Úlohy
 
-pro PLC
-https://github.com/Vt002/Prace-s-digitalnimi-vstupy-a-vystupy-a-rizeni-na-z-klade-casu/blob/1fc61e03ad955c2334e6ea4de73aef490039d481/PLC/ulohy_PLC.md
+### 1. Integrované periferie a obvody vstupů a výstupů
+
+1. Zjistěte, jaké jsou externí a jaké integrované periferie u běžného počítače.
+2. U vámi používanému hardwaru vyhledeje technický list a zjistěte z něj jeho integrované periferie.
+3. Co z toho jsou obvody vstupů a výstupů? A jaký typ vstupu/výstupu jimi realizujeme?
+4. Vyhledejte v dokumentaci (technický list), jak jsou ošetřeny DI, DO, RO (pouze u PLC), AI a AO.
+
+    <details>
+        <summary> :bulb: Tip: </summary>
+            Technický list = datasheet
+            K MCU často nalezneme jen výňatky na pár desítek stran, ale některé informace nalezneme pouze v kompletním technickém listu, který mívá několik set stran.
+            U modulárních PLC se informace ke vstupům a výstupům dozvýme z technických listů jednotlivých karet.
+    </details>
+
+
+
+Další úlohy jsou specializovány pro určitý typ hardwaru:
 
 [pro PLC](PLC/ulohy_PLC.md)
 
@@ -34,10 +49,6 @@ https://github.com/Vt002/Prace-s-digitalnimi-vstupy-a-vystupy-a-rizeni-na-z-klad
 > Programovatelný logický automat
 > Programovatelný logický automat. Online. In: Wikipedia: the free encyclopedia. San Francisco (CA): Wikimedia Foundation, 2024, 23. 2. 2024 v 09:19. Dostupné z: https://cs.wikipedia.org/wiki/Programovateln%C3%BD_logick%C3%BD_automat. [cit. 2024-12-28].
 
-
-
-pro MCU
-https://github.com/Vt002/Prace-s-digitalnimi-vstupy-a-vystupy-a-rizeni-na-z-klade-casu/blob/1fc61e03ad955c2334e6ea4de73aef490039d481/MCU/ulohy_MCU.md
 
 [pro MCU](MCU/ulohy_MCU.md)
 
