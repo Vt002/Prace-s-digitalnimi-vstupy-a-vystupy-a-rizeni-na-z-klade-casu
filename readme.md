@@ -10,6 +10,13 @@
 ## Cíl
 
 -	Studenti popíší nejběžnější integrované periferie u mikrokontrolerů
+-   Mají přehled v nejběžnějších obvodech vstupů a výstuppů
+-   K vybranému HW připojí tlačítko/spínač/senzor se spínacím/rozpínacím výstupem a kontrolka (LED)
+-   Vysvětlí a podloží výpočtem předřadný rezistor
+-   Vysvětlí význam pull-up rezistoru jak u tlačítka/spínače, tak i u sběrnic
+-   Vysvětlí pojmy timer a counter a popíší základní princip obvodu
+-   Napíší jedoduchý program využívájící timer nebo counter
+-   Na příkladech vysvětlí, co je řízení podle času
 
 
 ## Ověření cílů
@@ -31,9 +38,12 @@ Práce s digitálními vstupy a výstupy a řízení (ovládání) na základě 
 3. Co z toho jsou obvody vstupů a výstupů? A jaký typ vstupu/výstupu jimi realizujeme?
 4. Vyhledejte v dokumentaci (technický list), jak jsou ošetřeny DI, DO, RO (pouze u PLC), AI a AO.
 
+
+
+
     <details>
         <summary> :bulb: Tip: </summary>
-            Technický list = datasheet
+            Technický list = datasheet <br>
             K MCU často nalezneme jen výňatky na pár desítek stran, ale některé informace nalezneme pouze v kompletním technickém listu, který mívá několik set stran.
             U modulárních PLC se informace ke vstupům a výstupům dozvýme z technických listů jednotlivých karet.
     </details>
