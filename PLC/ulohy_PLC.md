@@ -11,8 +11,7 @@
 <details>
     <summary> :bulb: Tip: </summary>
         Při programování je vhodné rozdělit si úlohu na jednodušší části, které si vždy odzkoušíte.
-        V tomto případě nejprve založte program a následně jej prázdný nahrajte do simulátoru.
-
+        V tomto případě nejprve založte program a následně jej prázdný nahrajte do simulátoru.<br>
         Až budete pracovat s hardwarem, bude postup skoro stejný, jen po založení projektu načtete hardwarovou konfiguraci PLC a poté prázdný program nahrajete.
         Tento postup vám pomůže vyloučit případné chyby ze založení projektu a načtení HW konfigurace.
 </details>
@@ -30,21 +29,23 @@
 
 <details>
     <summary> :bulb: Tip: </summary>
-        Svítidla a ovládací prvky můžete zakreslit podle následujícího příkladu:
-        ![image](pudorys001.jpg)
+        Svítidla a ovládací prvky můžete zakreslit podle následujícího příkladu:<br>
+        <img src="pudorys001.jpg" alt="pudorys" width="200"/>
 </details>
+
 
 <details>
     <summary> :bulb: Tip: </summary>
         Ovládací prvky nejsou spínače, jako u domovní elektroinstalace, ale tlačítka, která se po uvolnění vrátí zpět. Pošlou tedy jen impulz různé délky. Pokud byste počítali se spínači a přepínači, připravili byste se o velký potenciál PLC.
 </details>
 
+
 <details>
     <summary> :bulb: Tip: </summary>
-        Jak ovládat žaluzie/rolety lze zjistit např. z násedujících technických listů:
-        - Informace k motorům a jejich zapojení je na stranách 24 až 28 a 30 (dole): ROLOVACÍ SYSTÉMY, Technické listy. Online. 2024, s. 56. Dostupné z: https://profisekce.lomax.cz:7001/sharing/R1OQgzvRh. [cit. 2024-12-30].
-        - Informace k modulům na ovládání rolet/žaluzií: 
-            - Ovládání asynchronních motorů pro žaluzie, markýzy, C-JC-0006M. Online. In: Teco Wiki. Kolín: Teco, 20.02.2020 17:48. Dostupné z: https://wiki.tecomat.cz/clanek/711-ovladani-asynchronnich-motoru-pro-zaluzie-markyzy-c-jc-0006m. [cit. 2024-12-31].
+        Jak ovládat žaluzie/rolety lze zjistit např. z násedujících technických listů:<br>
+        - Informace k motorům a jejich zapojení je na stranách 24 až 28 a 30 (dole): ROLOVACÍ SYSTÉMY, Technické listy. Online. 2024, s. 56. Dostupné z: https://profisekce.lomax.cz:7001/sharing/R1OQgzvRh. [cit. 2024-12-30].<br>
+        - Informace k modulům na ovládání rolet/žaluzií: <br>
+            - Ovládání asynchronních motorů pro žaluzie, markýzy, C-JC-0006M. Online. In: Teco Wiki. Kolín: Teco, 20.02.2020 17:48. Dostupné z: https://wiki.tecomat.cz/clanek/711-ovladani-asynchronnich-motoru-pro-zaluzie-markyzy-c-jc-0006m. [cit. 2024-12-31].<br>
             - Ovládání asynchronních motorů pro žaluzie, markýzy, C-JC-0201B. Online. In: Teco Wiki. Kolín: Teco, 20.02.2020 17:53. Dostupné z: https://wiki.tecomat.cz/clanek/712-ovladani-asynchronnich-motoru-pro-zaluzie-markyzy-c-jc-0201b. [cit. 2024-12-31].
 </details>
 
@@ -69,9 +70,6 @@
     <summary> :bulb: Tip: </summary>
         Ov
 </details>
-
-
-Ovládání rolet https://www.lomax-centrum.cz/wp-content/uploads/2022/04/rolety-technicky-list.pdf
 
 
 
