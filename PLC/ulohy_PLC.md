@@ -20,12 +20,6 @@
 ### 2. Složitější program v simulátoru
 
 1. Vyhledejte na internetu půdorys bytu/domu (zazálohujte si neupravenou podobu, možná se vám bude později hodit).
-2. Vyznačte v něm rozmístění světel, tlačítkových ovladačů, ventilátoru, senzoru pohybu a žaluzií nebo venkovních rolet.
-3. Napište/sestavte program pro ovládání:
-    - Alespoň jednoho světla minimálně ze dvou míst
-    - Světla/ventilárotu, který se sepne tlačítkem/senzorem pohybu a vypne automaticky po uplynutí nastaveného času
-    - Žaluzií/venkovních rolet.
-4. Program odzkoušejte a případně opravte.
 
 <details>
     <summary> :bulb: Tip: </summary>
@@ -33,6 +27,11 @@
         <img src="pudorys001.jpg" alt="pudorys" width="200"/>
 </details>
 
+2. Vyznačte v něm rozmístění světel, tlačítkových ovladačů, ventilátoru, senzoru pohybu a žaluzií nebo venkovních rolet.
+3. Napište/sestavte program pro ovládání:
+    - Alespoň jednoho světla minimálně ze dvou míst
+    - Světla/ventilárotu, který se sepne tlačítkem/senzorem pohybu a vypne automaticky po uplynutí nastaveného času
+    - Žaluzií/venkovních rolet.
 
 <details>
     <summary> :bulb: Tip: </summary>
@@ -51,6 +50,9 @@
 </details>
 
 
+4. Program odzkoušejte a případně opravte.
+
+
 ### 3. Vizualizace
 
 1. Váš program doplňte o vizualizaci. Na pozadí dejte váš půdoryr, ale bez schématických značek zařízení. Ty nahraďte vhodnými aktivními ikonami.
@@ -65,14 +67,6 @@
 ### 4. Nahrání programu do PLC
 
 1. Navrhněte (nakreslete schéma a v případě potřeby podložte výpočty) zapojení LED a tlačítka k PLC.
-2. Zapojte k PLC tlačítka a kontrolky, případně další prvky (podle možností).
-3. Program z úlohy 2 a vizualizaci z úlohy 3 upravte pro PLC tak, abyste měli alespoň ovládání:
-    - Světla z více míst
-    - Zpožděné vypnutí světla (tlačítkem nebo senzorem pohybu se rozsvítí a po nastavené do bě zhasne) nebo zpožděné vypnutí ventilátoru (např. na WC, kdy s rozsvícením světla se zapne i ventilátor, ale vypne se až nastavený čas po zhasnutí světla)
-    - Žaluzie/venkovní rolety pomocí dvou tlačítek (up/down) s rozlišením délky stisknutí (krátký stisk: jede až do koncové polohy, dlouhý stisk: po dobu stisknutí jede, po uvolnění se automaticky zastaví), koncové spínače a případná ochrana je součástí motoru
-4. Vše nahrajte do PLC a odzkoušejte a to včetně vizualizace.
-5. Nastavte přihlašovací údaje a vyzkoušejte vizualizaci v prohlížeči.
-
 
 <details>
     <summary> :bulb: Tip: </summary>
@@ -86,6 +80,17 @@
         Příklad zapojení LED:
         --- doplnit o zapojení sink/source vč. schématu a výpočtu předřad. R
 </details>
+
+2. Zapojte k PLC tlačítka a kontrolky, případně další prvky (podle možností).
+3. Program z úlohy 2 a vizualizaci z úlohy 3 upravte pro PLC tak, abyste měli alespoň ovládání:
+    - Světla z více míst
+    - Zpožděné vypnutí světla (tlačítkem nebo senzorem pohybu se rozsvítí a po nastavené do bě zhasne) nebo zpožděné vypnutí ventilátoru (např. na WC, kdy s rozsvícením světla se zapne i ventilátor, ale vypne se až nastavený čas po zhasnutí světla)
+    - Žaluzie/venkovní rolety pomocí dvou tlačítek (up/down) s rozlišením délky stisknutí (krátký stisk: jede až do koncové polohy, dlouhý stisk: po dobu stisknutí jede, po uvolnění se automaticky zastaví), koncové spínače a případná ochrana je součástí motoru
+4. Vše nahrajte do PLC a odzkoušejte a to včetně vizualizace.
+5. Nastavte přihlašovací údaje a vyzkoušejte vizualizaci v prohlížeči.
+
+
+
 
 
 
