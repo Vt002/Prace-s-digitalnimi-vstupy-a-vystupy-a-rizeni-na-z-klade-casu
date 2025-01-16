@@ -1,9 +1,11 @@
 [Co dodělat ]: #
 
-<!-- cíl -->
+<!-- dodělat zapojení tlačítka a LED (sink source), vč. výpočtů -->
 
-<!-- do jiné úlohy přidat jako typy odkazy na info o millis, ticks_ms a interruptu  -->
+<!-- do ulohy_MCU.md přidat jako typy odkazy na info o millis, ticks_ms a interruptu  -->
 
+
+# E11 S22 A8
 
 # Práce s digitálními vstupy a výstupy a řízení (ovládání) na základě času
 

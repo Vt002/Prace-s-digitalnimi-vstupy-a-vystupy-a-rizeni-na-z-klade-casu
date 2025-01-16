@@ -66,20 +66,39 @@
 
 ### 4. Nahrání programu do PLC
 
-1. Navrhněte (nakreslete schéma a v případě potřeby podložte výpočty) zapojení LED a tlačítka k PLC.
+1. Navrhněte zapojení LED a tlačítek k PLC, která poslouží jako simulace reálného osvětlení, kontrolek, ovladačů, apod. Nakreslete schéma zapojení a v případě potřeby podložte výpočty.
 
 <details>
     <summary> :bulb: Tip: </summary>
         Příklad zapojení tlačítka:
-        --- doplnit zapojení sink/source vč. schématu
+        REALPARS. Sinking and Sourcing PLC Inputs Explained | What is the Difference? Online. 2021. Dostupné z: https://youtu.be/B65detMhnoc?feature=shared. [cit. 2025-01-16].
+        
+
+
 </details>
 
 
 <details>
     <summary> :bulb: Tip: </summary>
         Příklad zapojení LED:
-        --- doplnit o zapojení sink/source vč. schématu a výpočtu předřad. R
+        REALPARS. Sinking and Sourcing PLC Outputs Explained. Online. 2021. Dostupné z: https://youtu.be/oyaItbhqoW0?feature=shared. [cit. 2025-01-16].
+        <!--- vč. schématu a výpočtu předřad. R-->
 </details>
+
+<!--
+Jak zapojit PLC
+How Electrical Control Panel Works | PLC Control Panel Basics | Electrical Panel Components. Online. 2021. Dostupné z: https://youtu.be/QV8mxq1umEQ?feature=shared. [cit. 2025-01-16].
+
+GUYATT, Chris. Electrical Control Panel Wiring in 9 Minutes with KNX. Online. 2023. Dostupné z: https://youtu.be/q8iWwK-XxEw?feature=shared. [cit. 2025-01-16].
+
+
+Jak číst schéma
+PEŤAN. Čtení v elektro-dokumentaci a oprava stroje. Online. 2024. Dostupné z: https://youtu.be/96OJIISBkDg?feature=shared. [cit. 2025-01-16].
+
+How to Read Electrical Diagrams | Wiring Diagrams Explained | Control Panel Wiring Diagram. Online. 2020. Dostupné z: https://youtu.be/GHhcyH99inE?feature=shared. [cit. 2025-01-16].
+-->
+
+
 
 2. Zapojte k PLC tlačítka a kontrolky, případně další prvky (podle možností).
 3. Program z úlohy 2 a vizualizaci z úlohy 3 upravte pro PLC tak, abyste měli alespoň ovládání:
@@ -100,11 +119,6 @@
 > :key: **Safety**
 >
 > Ve s
-
-
-
-
-
 
 
 
