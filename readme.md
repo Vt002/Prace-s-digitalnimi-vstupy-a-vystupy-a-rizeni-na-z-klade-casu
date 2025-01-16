@@ -5,7 +5,11 @@
 <!-- do ulohy_MCU.md přidat jako typy odkazy na info o millis, ticks_ms a interruptu  -->
 
 
-# E11 S22 A8
+<h1>
+    <font color="Orange">E11</font>
+    <font color="Yellow">S22</font>
+    <font color="SteelBlue">A8</font>
+</h1>
 
 # Práce s digitálními vstupy a výstupy a řízení (ovládání) na základě času
 
