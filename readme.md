@@ -8,9 +8,9 @@
 
 # Práce s digitálními vstupy a výstupy a řízení (ovládání) na základě času
 
-<h2 style="color:Orange">E11</h2>
-<h2 style="color:Yellow">S22</h2>
-<h2 style="color:SteelBlue">A8</h2>
+<h2 style="color:#FFA500">E11</h2>
+<h2 style="color:#FFFF00">S22</h2>
+<h2 style="color:#4682B4">A8</h2>
 
 ## Cíl
 
