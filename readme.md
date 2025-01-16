@@ -8,9 +8,7 @@
 
 # Práce s digitálními vstupy a výstupy a řízení (ovládání) na základě času
 
-<p style="color:#FFA500">E11</p>
-<p style="color:#FFFF00">S22</p>
-<p style="color:#4682B4">A8</p>
+$${\color{#FFA500}E11 \space \color{Gold}S22 \space \color{#4682B4}A8 }$$
 
 ## Cíl
 
