@@ -1,11 +1,30 @@
 ## Úlohy k MCU
 
-### 2. S
+### 2. Seznámení se simulátorem
+
+1. 
 
 
 
 
 
+
+
+> :key: **Digitální vstup**
+>
+> [Příklad zapojení tlačítka.](../DI.md)
+
+
+> :key: **Digitální výstup**
+>
+> [Příklad zapojení LED.](../DO.md)
+
+
+
+
+
+
+<!--
 1. Při zapojování některé z úloh sepište, jaká bezpečnostní opatření jste museli dodržovat.
 
     <details>
@@ -14,10 +33,6 @@
     </details>
 
 
-
-
-
-<!--
 
 > :key: **Safety**
 >

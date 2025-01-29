@@ -70,12 +70,12 @@
 
 > :key: **Digitální vstup**
 >
-> [Příklad zapojení tlačítka.](DI.md)
+> [Příklad zapojení tlačítka.](../DI.md)
 
 
 > :key: **Digitální výstup**
 >
-> [Příklad zapojení LED.](DO.md)
+> [Příklad zapojení LED.](../DO.md)
 
 
 <details>

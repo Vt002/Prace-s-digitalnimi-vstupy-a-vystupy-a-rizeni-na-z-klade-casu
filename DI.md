@@ -6,7 +6,7 @@ https://github.com/JVintera/KiCAD-library
 
 ## Digitální vstupy 
 
-**digital input (DI), binary input (BI), Digitale Eingang (E), input (I)**
+**Digital Input (DI), Binary Input (BI), Digitale Eingang (E), Input (I)**
 
 Slouží k připojení součástek, senzorů, apod. se spínaným výstupem.
 V automatizační technice se obvykle setkáme s pojmy **sink** a **source digital input**, u mikropočítačů s **pull-up** a **pull-down rezistory**, ale ve výsledku jde o naprosto identická zapojení. 
@@ -22,6 +22,9 @@ V automatizační technice se obvykle setkáme s pojmy **sink** a **source digit
 
 ![Zapojení tlačítka k PLC. Při log. 0 svítí (záporná logika).](/schemata/button_zapornaLog.png)
 *Obr. 4: Zapojení tlačítka k PLC. Při log. 0 svítí (záporná logika).*
+
+Senzory se zapojují v podstatě stejně, jako tlačítka, tedy pin BN (Brown) na Vcc, BU (Blue) na GND a BK a WH na DI. Zakresluje se to ale trochu jinak, viz např. https://www.jmtcontrol.pl/czujnik-indukcyjny-lr18xbf08dpoy#galleryName=productGallery,imageNumber=2
+
 
 V praxi se můžeme setkat ještě s dalšími názvy a zkratkami, lteré se týkají této problematiky.
 Např. 
