@@ -11,9 +11,18 @@ https://github.com/JVintera/KiCAD-library
 Slouží k připojení spínaných součástek, strojů, apod., např. LED, elektromagnetů a motorů. U mikrořadičů se používají k realizaci softwarových sběrnic, pak přes ně lze připojit i např. některé displeje a senzory.
 V automatizační technice se obvykle setkáme s pojmy **sink** a **source digital output**, u mikropočítačů s **kladnou** a **zápornou/inverzní logikou**, ale ve výsledku jde o naprosto identická zapojení. 
 
-![alt text](/schemata/LED_kladnaLog.png "Title")
+![Zapojení LED k MCU. Při log. 1 svítí (kladná logika).](/schemata/LED_kladnaLog.png )
+*Obr. 1: Zapojení LED k MCU. Při log. 1 svítí (kladná logika).*
 
-![Tux, the Linux mascot](/schemata/load_kladnaLog.png)
+![Zapojení zátěže, např. LED k PLC. Při log. 1 svítí (kladná logika).](/schemata/load_kladnaLog.png)
+*Obr. 2: Zapojení zátěže, např. LED k PLC. Při log. 1 svítí (kladná logika).*
+
+![Zapojení LED k MCU. Při log. 0 svítí (záporná logika).](/schemata/LED_zapornaLog.png )
+*Obr. 3: Zapojení LED k MCU. Při log. 0 svítí (záporná logika).*
+
+![Zapojení zátěže, např. LED k PLC. Při log. 0 svítí (záporná logika).](/schemata/load_zapornaLog.png)
+*Obr. 4: Zapojení zátěže, např. LED k PLC. Při log. 0 svítí (záporná logika).*
+
 
 
 V praxi se můžeme setkat ještě s dalšími názvy a zkratkami, lteré se týkají této problematiky. Více viz DI.md
