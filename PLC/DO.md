@@ -11,7 +11,7 @@ https://github.com/JVintera/KiCAD-library
 Slouží k připojení spínaných součástek, strojů, apod., např. LED, elektromagnetů a motorů. U mikrořadičů se používají k realizaci softwarových sběrnic, pak přes ně lze připojit i např. některé displeje a senzory.
 V automatizační technice se obvykle setkáme s pojmy **sink** a **source digital output**, u mikropočítačů s **kladnou** a **zápornou/inverzní logikou**, ale ve výsledku jde o naprosto identická zapojení. 
 
-![alt text](LED_kladnaLog.png "Title")
+![alt text](schemata/LED_kladnaLog.png "Title")
 
 
 
