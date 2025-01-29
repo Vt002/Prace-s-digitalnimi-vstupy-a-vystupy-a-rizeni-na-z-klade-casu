@@ -1,0 +1,109 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:LED D2
+U 1 1 5E41792F
+P 3050 2600
+F 0 "D2" H 3043 2816 50  0000 C CNN
+F 1 "LED" H 3043 2725 50  0000 C CNN
+F 2 "" H 3050 2600 50  0001 C CNN
+F 3 "~" H 3050 2600 50  0001 C CNN
+	1    3050 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5E41BA22
+P 3350 2100
+F 0 "R1" V 3154 2100 50  0000 C CNN
+F 1 "..." V 3245 2100 50  0000 C CNN
+F 2 "" H 3350 2100 50  0001 C CNN
+F 3 "~" H 3350 2100 50  0001 C CNN
+	1    3350 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L MCU_Module:Arduino_UNO_R3 A?
+U 1 1 5E41BEEA
+P 4000 2700
+F 0 "A?" H 4000 3881 50  0000 C CNN
+F 1 "Arduino_UNO_R3" H 4000 3790 50  0000 C CNN
+F 2 "Module:Arduino_UNO_R3" H 4150 1650 50  0001 L CNN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 3800 3750 50  0001 C CNN
+	1    4000 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5E4208B2
+P 3350 2600
+F 0 "R2" V 3154 2600 50  0000 C CNN
+F 1 "..." V 3245 2600 50  0000 C CNN
+F 2 "" H 3350 2600 50  0001 C CNN
+F 3 "~" H 3350 2600 50  0001 C CNN
+	1    3350 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5E42127C
+P 3050 2100
+F 0 "D1" H 3043 1845 50  0000 C CNN
+F 1 "LED" H 3043 1936 50  0000 C CNN
+F 2 "" H 3050 2100 50  0001 C CNN
+F 3 "~" H 3050 2100 50  0001 C CNN
+	1    3050 2100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E421B78
+P 2850 2050
+F 0 "#PWR?" H 2850 1900 50  0001 C CNN
+F 1 "+5V" H 2865 2223 50  0000 C CNN
+F 2 "" H 2850 2050 50  0001 C CNN
+F 3 "" H 2850 2050 50  0001 C CNN
+	1    2850 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-PowerSymbols:GND #GND?
+U 1 1 5E422AFB
+P 2850 2650
+F 0 "#GND?" H 2900 2600 45  0001 L BNN
+F 1 "GND" H 2850 2480 45  0000 C CNN
+F 2 "" H 2850 2550 60  0001 C CNN
+F 3 "" H 2850 2550 60  0001 C CNN
+	1    2850 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 2100 3250 2100
+Wire Wire Line
+	3450 2100 3500 2100
+Wire Wire Line
+	2900 2100 2850 2100
+Wire Wire Line
+	2850 2100 2850 2050
+Wire Wire Line
+	3450 2600 3500 2600
+Wire Wire Line
+	3250 2600 3200 2600
+Wire Wire Line
+	2900 2600 2850 2600
+Wire Wire Line
+	2850 2600 2850 2650
+$EndSCHEMATC

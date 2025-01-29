@@ -1,4 +1,4 @@
-## Úlohy
+## Úlohy k MCU
 
 ### 2. S
 

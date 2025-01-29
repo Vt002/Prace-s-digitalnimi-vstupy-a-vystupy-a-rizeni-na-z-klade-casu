@@ -1,4 +1,4 @@
-## Úlohy
+## Úlohy k PLC
 
 ### 2. Seznámení se simulátorem
 
@@ -68,16 +68,15 @@
 
 1. Navrhněte zapojení LED a tlačítek k PLC, která poslouží jako simulace reálného osvětlení, kontrolek, ovladačů, apod. Nakreslete schéma zapojení a v případě potřeby podložte výpočty.
 
-<details>
-    <summary> :bulb: Tip: </summary>
-        [Příklad zapojení tlačítka.](DI.md)
-</details>
+> :key: **Digitální vstup**
+>
+> [Příklad zapojení tlačítka.](DI.md)
 
 
-<details>
-    <summary> :bulb: Tip: </summary>
-        [Příklad zapojení LED.](DO.md)
-</details>
+> :key: **Digitální výstup**
+>
+> [Příklad zapojení LED.](DO.md)
+
 
 <details>
     <summary> :bulb: Tip: </summary>

@@ -4,7 +4,9 @@ https://github.com/JVintera/KiCAD-library
  -->
 
 
-## Digitální vstupy (DI, BI)
+## Digitální vstupy 
+
+**digital input (DI), binary input (BI), Digitale Eingang (E), input (I)**
 
 Slouží k připojení součástek, senzorů, apod. se spínaným výstupem.
 V automatizační technice se obvykle setkáme s pojmy **sink** a **source digital input**, u mikropočítačů s **pull-up** a **pull-down rezistory**, ale ve výsledku jde o naprosto identická zapojení. 
