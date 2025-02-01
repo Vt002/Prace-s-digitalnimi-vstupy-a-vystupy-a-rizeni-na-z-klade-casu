@@ -30,21 +30,16 @@
 > :key: **PWM**
 >
 > Pulzně šířková modulace (Pulse-Width Modulation)
+> Používá se v číslicové technice k řízení např. jasu LED, otáček motorů, apod. I když spojitá změna napětí, případně proudu má své výhody, je k ní potřeba DAC (digitálně analogový převodník), což je poměrně složitý a pomalý obvod. PWM je v tomto případě jednodušší na realizaci, využívá digitální výstup a čítač. 
 > 
 > Příklad v Arduino language
-> 
+> Arduino Uno R4 WiFi LESSON 11: Pulse Width Modulation (PWM) Simulation of Analog Voltages. Online. 2024. Dostupné z: https://youtu.be/4QUH5D_6XVc?feature=shared. [cit. 2025-02-01].
 > 
 > Příklad v micropythonu
+> Raspberry Pi Pico W LESSON 9: Getting Analog Output Using PWM (Pulse Width Modulation). Online. 2023. Dostupné z: https://youtu.be/GXA1Y6lA14A?feature=shared. [cit. 2025-02-01].
 > 
-> 
-<!-- 
-Doplnit 
+> Raspberry Pi Pico: PWM slábnutí LED (MicroPython). Online. In: . 2023. Dostupné z: https://randomnerdtutorials.com/raspberry-pi-pico-pwm-micropython/. [cit. 2025-02-01].
 
- Video s ukázkou v arduinolanguage na ESP32
-
- Video s ukázkou v micropythonu na rapsberry pi pico,
- případně i v circuit pythonu
--->
 
 ### 3. Přechod pro chodce
 
@@ -64,7 +59,7 @@ Doplnit
 4. Do předešlého programu zakomponujte paměť pro uložení stavu tlačítka a upravte program tak, aby jedním stsknutím tlačítka se LED rozsvítila a následujícím zhasla.
 5. Rozšiřte tento program o další LED a naprogramujte přechod pro chodce se semafory, viz obrázek:
 
-<!-- Fotka světelného semaforu v Solnici u hřbitova, nebo ve Staině u školky -->
+[Fotka světelného semaforu ve Slatině u MŠ, printsceen z mapy.cz](semafor.png)
 
 <details>
     <summary> :bulb: Tip: </summary>
