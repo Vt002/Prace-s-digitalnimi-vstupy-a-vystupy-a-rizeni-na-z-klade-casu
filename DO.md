@@ -4,6 +4,14 @@ https://github.com/JVintera/KiCAD-library
  -->
 
 
+<!--
+Doplnit 
+
+Výpočet předřadného rezistoru LED, schéma, zapojení na nepájivém poli a proměření
+
+-->
+
+
 ## Digitální výstupy 
 
 **Digital Output (DO), Binary Output (BO), Digitaler Ausgang (A), Output (Kvůli záměně O za 0 se nahrazuje písmenem Q)**
@@ -31,4 +39,3 @@ REALPARS. Sinking and Sourcing PLC Outputs Explained. Online. 2021. Dostupné z:
         
         
         
-<!--- vč. schématu a výpočtu předřad. R-->
