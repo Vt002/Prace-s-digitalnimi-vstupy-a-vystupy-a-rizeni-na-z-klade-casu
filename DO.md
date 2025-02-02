@@ -17,10 +17,16 @@ Výpočet předřadného rezistoru LED, schéma, zapojení na nepájivém poli a
 **Digital Output (DO), Binary Output (BO), Digitaler Ausgang (A), Output (Kvůli záměně O za 0 se nahrazuje písmenem Q)**
 
 Slouží k připojení spínaných součástek, strojů, apod., např. LED, elektromagnetů a motorů. U mikrořadičů se používají k realizaci softwarových sběrnic, pak přes ně lze připojit i např. některé displeje a senzory.
-V automatizační technice se obvykle setkáme s pojmy **sink** a **source digital output**, u mikropočítačů s **kladnou** a **zápornou/inverzní logikou**, ale ve výsledku jde o naprosto identická zapojení. 
+V automatizační technice se obvykle setkáme s pojmy **sink (NPN)** a **source (PNP) digital output**, u mikropočítačů s **kladnou** a **zápornou/inverzní logikou**, ale ve výsledku jde o naprosto identická zapojení. 
+
+Na následujících elektrických schématech jsou vedle sebe naprosto identická zapojení, jen různě nakreslená. V praxi se používají nejen tyto varianty, vždy však musí splňovat pravidla pro kreslení elektrickcých schémat, která jsou daná normami. Je tedy jedno, jak budete schémata kreslit, ale musí splňovat tyto normy.
 
 ![Zapojení LED k MCU. Při log. 1 svítí (kladná logika).](/schemata/LED_kladnaLog.png )
 *Obr. 1: Zapojení LED k MCU. Při log. 1 svítí (kladná logika).*
+
+LED se zapojují s tzv. předřadným rezistorem, na kterém se zmaří přebytečná energie a tím se chrání LED. Ukažme si to na následujícím příkladu:
+
+U~CC~ =
 
 ![Zapojení zátěže, např. LED k PLC. Při log. 1 svítí (kladná logika).](/schemata/load_kladnaLog.png)
 *Obr. 2: Zapojení zátěže, např. LED k PLC. Při log. 1 svítí (kladná logika).*

@@ -59,7 +59,7 @@
 4. Do předešlého programu zakomponujte paměť pro uložení stavu tlačítka a upravte program tak, aby jedním stsknutím tlačítka se LED rozsvítila a následujícím zhasla.
 5. Rozšiřte tento program o další LED a naprogramujte přechod pro chodce se semafory, viz obrázek:
 
-[Fotka světelného semaforu ve Slatině u MŠ, printsceen z mapy.cz](semafor.png)
+[Fotka světelného semaforu ve Slatině u MŠ, printsceen z mapy.cz](/MCU/semafor.png)
 
 <details>
     <summary> :bulb: Tip: </summary>
@@ -68,16 +68,23 @@
         - Druhou možností je použít pro tlačítko interrupt z vnějšího pinu.
 </details>
 
+
+> :key: **Vnější (hardwarové) přerušení**
+> 
+> V našem případě používáme přerušení z vnějšího pinu, které patří mezi vnější (hardwarová) přerušení, více viz
+> 
+> Přerušení. Online. In: Wikipedia: the free encyclopedia. San Francisco (CA): Wikimedia Foundation, 2007, 17. 7. 2023. Dostupné z: https://cs.wikipedia.org/wiki/P%C5%99eru%C5%A1en%C3%AD. [cit. 2025-02-02].
+> 
+> Příklad v Micropythonu
+> Raspberry Pi Pico W LESSON 83: Using Interrupts in Micropython. Online. In: . 2024. Dostupné z: https://youtu.be/GxtQJmvhsvs?feature=shared. [cit. 2025-02-02].
+
+
 > :key: **Vnitřní časovač**
 >
-> 
+> ???
 <!-- odkaz na videa s tick_ms a millis -->
 
 
-> :key: **Přerušení (z vnějšího pinu)**
->
-> 
-<!-- Odkazy na přerušení z vnějšího pinu v micropythonu a Arduino l. -->
 
 
 ### 4. Blikačka na kolo
