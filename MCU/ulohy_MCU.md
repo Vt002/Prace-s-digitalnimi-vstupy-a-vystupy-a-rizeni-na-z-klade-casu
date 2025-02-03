@@ -60,6 +60,7 @@
 5. Rozšiřte tento program o další LED a naprogramujte přechod pro chodce se semafory, viz obrázek:
 
 ![Fotka světelného semaforu ve Slatině u MŠ, printsceen z mapy.cz](/MCU/semafor.png)
+Fotka světelného semaforu ve Slatině u MŠ, printsceen z mapy.cz
 
 <details>
     <summary> :bulb: Tip: </summary>
@@ -81,10 +82,12 @@
 
 > :key: **Vnitřní časovač**
 >
-> ???
-<!-- odkaz na videa s tick_ms a millis -->
-
-
+> Spouští se poté, co mikrořadit naběhne z resetu, obvykle využívá jeden z hardwarových čítačů mikrořadiče, a po určité době přeteče (resetuje se).
+> 
+> V Arduino language z něj můžeme číst hodnotu pomocí funkce millis()
+> 
+> V Micropythonu z něj můžeme číst hodnotu pomocí ticks_ms() z knihovny time. Více viz
+> Time – time related functions¶. Online. In: . 29 Jan 2025. Dostupné z: https://docs.micropython.org/en/latest/library/time.html. [cit. 2025-02-03].
 
 
 ### 4. Blikačka na kolo
