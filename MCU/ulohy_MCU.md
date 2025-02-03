@@ -59,7 +59,7 @@
 4. Do předešlého programu zakomponujte paměť pro uložení stavu tlačítka a upravte program tak, aby jedním stsknutím tlačítka se LED rozsvítila a následujícím zhasla.
 5. Rozšiřte tento program o další LED a naprogramujte přechod pro chodce se semafory, viz obrázek:
 
-[Fotka světelného semaforu ve Slatině u MŠ, printsceen z mapy.cz](/MCU/semafor.png)
+![Fotka světelného semaforu ve Slatině u MŠ, printsceen z mapy.cz](/MCU/semafor.png)
 
 <details>
     <summary> :bulb: Tip: </summary>
