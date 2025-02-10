@@ -24,7 +24,6 @@
         Tento přístup je vhodné aplikovat i při práci s hardwarem. Tedy např. nejprve zapojíte část, kterou následně odzkoušíte, tzv. oživíte. Přidáte další, atd. Tím omezíte počet možných chyb a lépe se vám budou případné chyby hledat.
 </details>
 
-
 4. Především, pokud použijete chatbota, zkontrolujte program, zda je optimalizován. V současné době i chatboty specializované na programování (např. GitHub Copilot) často generují zbytečný kód, navíc dělají chyby v logice programu.
 
 > :key: **PWM**
@@ -38,8 +37,7 @@
 > Příklad v micropythonu
 > Raspberry Pi Pico W LESSON 9: Getting Analog Output Using PWM (Pulse Width Modulation). Online. 2023. Dostupné z: https://youtu.be/GXA1Y6lA14A?feature=shared. [cit. 2025-02-01].
 > 
-> Raspberry Pi Pico: PWM slábnutí LED (MicroPython). Online. In: . 2023. Dostupné z: https://randomnerdtutorials.com/raspberry-pi-pico-pwm-micropython/. [cit. 2025-02-01].
-
+> Raspberry Pi Pico: PWM slábnutí LED (MicroPython). Online. In: 2023. Dostupné z: https://randomnerdtutorials.com/raspberry-pi-pico-pwm-micropython/. [cit. 2025-02-01].
 
 ### 3. Přechod pro chodce
 
@@ -49,14 +47,13 @@
 >
 > [Příklad zapojení tlačítka.](../DI.md)
 
-
 > :key: **Digitální výstup**
 >
 > [Příklad zapojení LED.](../DO.md)
 
-2. Nastavte pin na kterém je tlačítko jako digitální vstup s pull-up rezistorem, a pin s LED na digitální výstup.
-3. Nejprve napište testovací program, který rozsvítí LED když je stisknuté tlačítko a zhasne ji, když tlačítko uvolníte. Všimněte si, že je tam někde obrácená logika. Zkuste zjistit kde a čím je to dáno. A zkuste vymyslet, jak softwarově logiku obrátit.
-4. Do předešlého programu zakomponujte paměť pro uložení stavu tlačítka a upravte program tak, aby jedním stsknutím tlačítka se LED rozsvítila a následujícím zhasla.
+2. Nastavte pin, na kterém je tlačítko jako digitální vstup s pull-up rezistorem, a pin s LED na digitální výstup.
+3. Nejprve napište testovací program, který rozsvítí LED, když je stisknuté tlačítko a zhasne ji, když tlačítko uvolníte. Všimněte si, že je tam někde obrácená logika. Zkuste zjistit, kde a čím je to dáno. A zkuste vymyslet, jak softwarově logiku obrátit.
+4. Do předešlého programu zakomponujte paměť pro uložení stavu tlačítka a upravte program tak, aby jedním stisknutím tlačítka se LED rozsvítila a následujícím zhasla.
 5. Rozšiřte tento program o další LED a naprogramujte přechod pro chodce se semafory, viz obrázek:
 
 ![Fotka světelného semaforu ve Slatině u MŠ, printsceen z mapy.cz](/MCU/semafor.png)
@@ -69,7 +66,6 @@ Fotka světelného semaforu ve Slatině u MŠ, printsceen z mapy.cz
         - Druhou možností je použít pro tlačítko interrupt z vnějšího pinu.
 </details>
 
-
 > :key: **Vnější (hardwarové) přerušení**
 > 
 > V našem případě používáme přerušení z vnějšího pinu, které patří mezi vnější (hardwarová) přerušení, více viz
@@ -79,20 +75,18 @@ Fotka světelného semaforu ve Slatině u MŠ, printsceen z mapy.cz
 > Příklad v Micropythonu
 > Raspberry Pi Pico W LESSON 83: Using Interrupts in Micropython. Online. In: . 2024. Dostupné z: https://youtu.be/GxtQJmvhsvs?feature=shared. [cit. 2025-02-02].
 
-
 > :key: **Vnitřní časovač**
 >
-> Spouští se poté, co mikrořadit naběhne z resetu, obvykle využívá jeden z hardwarových čítačů mikrořadiče, a po určité době přeteče (resetuje se).
+> Spouští se poté, co mikrořadič naběhne z resetu, obvykle využívá jeden z hardwarových čítačů mikrořadiče, a po určité době přeteče (resetuje se).
 > 
 > V Arduino language z něj můžeme číst hodnotu pomocí funkce millis()
 > 
 > V Micropythonu z něj můžeme číst hodnotu pomocí ticks_ms() z knihovny time. Více viz
 > Time – time related functions¶. Online. In: . 29 Jan 2025. Dostupné z: https://docs.micropython.org/en/latest/library/time.html. [cit. 2025-02-03].
 
-
 ### 4. Blikačka na kolo
 
-1. Napište program pro blikačku na kolo s minimálně čtyřmi režimy mezi nimiž přepínejte pomocí tlačítka.
+1. Napište program pro blikačku na kolo s minimálně čtyřmi režimy, mezi nimiž přepínejte pomocí tlačítka.
 
 <details>
     <summary> :bulb: Tip: </summary>
@@ -103,4 +97,5 @@ Fotka světelného semaforu ve Slatině u MŠ, printsceen z mapy.cz
     <summary> :bulb: Tip: </summary>
         Zadání si zkuste rozdělit na jednodušší části, které lze samostatně zprovoznit a odladit.
 </details>
+
 

@@ -7,19 +7,17 @@
 3. Nastavte simulátor, přeložte a nahrajte do něj program.
 4. Program odzkoušejte, případně upravte a nahrajte znovu.
 
-
 <details>
     <summary> :bulb: Tip: </summary>
         Při programování je vhodné rozdělit si úlohu na jednodušší části, které si vždy odzkoušíte.
-        V tomto případě nejprve založte program a následně jej prázdný nahrajte do simulátoru.<br>
+        V tomto případě nejprve založte program a následně jej prázdný nahrajte do simulátoru. <br>
         Až budete pracovat s hardwarem, bude postup skoro stejný, jen po založení projektu načtete hardwarovou konfiguraci PLC a poté prázdný program nahrajete.
         Tento postup vám pomůže vyloučit případné chyby ze založení projektu a načtení HW konfigurace.
 </details>
 
-
 ### 3. Složitější program v simulátoru
 
-1. Vyhledejte na internetu půdorys bytu/domu (zazálohujte si neupravenou podobu, možná se vám bude později hodit).
+1. Vyhledejte na internetu půdorys bytu/domu (zálohujte si neupravenou podobu, možná se vám bude později hodit).
 
 <details>
     <summary> :bulb: Tip: </summary>
@@ -38,7 +36,6 @@
         Ovládací prvky nejsou spínače, jako u domovní elektroinstalace, ale tlačítka, která se po uvolnění vrátí zpět. Pošlou tedy jen impulz různé délky. Pokud byste počítali se spínači a přepínači, připravili byste se o velký potenciál PLC.
 </details>
 
-
 <details>
     <summary> :bulb: Tip: </summary>
         Jak ovládat žaluzie/rolety lze zjistit např. z násedujících technických listů:<br>
@@ -49,9 +46,7 @@
             - Ovládání asynchronních motorů pro žaluzie, markýzy, C-JC-0201B. Online. In: Teco Wiki. Kolín: Teco, 20.02.2020 17:53. Dostupné z: https://wiki.tecomat.cz/clanek/712-ovladani-asynchronnich-motoru-pro-zaluzie-markyzy-c-jc-0201b. [cit. 2024-12-31].
 </details>
 
-
 4. Program odzkoušejte a případně opravte.
-
 
 ### 4. Vizualizace
 
@@ -60,9 +55,8 @@
 <details>
     <summary> :bulb: Tip: </summary>
         Pro vizualizaci se můžete inspirovat např. náhledy v následujícím článku: <br>
-        Kompletní systém řízení a vizualizace technologií rodinného domu v Kroměříži. Online. In: . Kolín: Teco, 2010. Dostupné z: https://www.tecomat.cz/reference/inteligentni-dum/kompletni-system-rizeni-a-vizualizace-technologii-rodinneho-domu-v-kromerizi-137/. [cit. 2024-12-31].
+        Kompletní systém řízení a vizualizace technologií rodinného domu v Kroměříži. Online. In: Kolín: Teco, 2010. Dostupné z: https://www.tecomat.cz/reference/inteligentni-dum/kompletni-system-rizeni-a-vizualizace-technologii-rodinneho-domu-v-kromerizi-137/. [cit. 2024-12-31].
 </details>
-
 
 ### 5. Nahrání programu do PLC
 
@@ -72,11 +66,9 @@
 >
 > [Příklad zapojení tlačítka.](../DI.md)
 
-
 > :key: **Digitální výstup**
 >
 > [Příklad zapojení LED.](../DO.md)
-
 
 <details>
     <summary> :bulb: Tip: </summary>
@@ -99,10 +91,11 @@
 2. Zapojte k PLC tlačítka a kontrolky, případně další prvky (podle možností).
 3. Program z úlohy 2 a vizualizaci z úlohy 3 upravte pro PLC tak, abyste měli alespoň ovládání:
     - Světla z více míst
-    - Zpožděné vypnutí světla (tlačítkem nebo senzorem pohybu se rozsvítí a po nastavené do bě zhasne) nebo zpožděné vypnutí ventilátoru (např. na WC, kdy s rozsvícením světla se zapne i ventilátor, ale vypne se až nastavený čas po zhasnutí světla)
+    - Zpožděné vypnutí světla (tlačítkem nebo senzorem pohybu se rozsvítí a po nastavené době zhasne) nebo zpožděné vypnutí ventilátoru (např. na WC, kdy s rozsvícením světla se zapne i ventilátor, ale vypne se až nastavený čas po zhasnutí světla)
     - Žaluzie/venkovní rolety pomocí dvou tlačítek (up/down) s rozlišením délky stisknutí (krátký stisk: jede až do koncové polohy, dlouhý stisk: po dobu stisknutí jede, po uvolnění se automaticky zastaví), koncové spínače a případná ochrana je součástí motoru
 4. Vše nahrajte do PLC a odzkoušejte a to včetně vizualizace.
 5. Nastavte přihlašovací údaje a vyzkoušejte vizualizaci v prohlížeči.
+
 
 
 
