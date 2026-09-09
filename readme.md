@@ -3,7 +3,7 @@
 
 # Práce s digitálními vstupy a výstupy a řízení (ovládání) na základě času
 
-$${\color{#FFA500}E11 \space \color{Gold}S22 \space \color{#4682B4}A8 }$$
+$${\color{#FFA500}E11 \space \color{Gold}S22 \space \color{#4682B4}A3 }$$
 
 ## Cíl
 
