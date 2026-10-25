@@ -10,19 +10,21 @@ https://github.com/JVintera/KiCAD-library
 Slouží k připojení součástek, senzorů, apod. se spínaným výstupem.
 V automatizační technice se obvykle setkáme s pojmy **sink (NPN)** a **source (PNP) digital input**, u mikropočítačů s **pull-up** a **pull-down rezistory**, ale ve výsledku jde o naprosto identická zapojení. 
 
-![Zapojení tlačítka k MCU s pull-up rezistorem (kladná logika).](/schemata/Rpull-up.png)
+![](schemata/Rpull-up.png)
 *Obr. 1: Zapojení tlačítka k MCU s pull-up rezistorem (kladná logika).*
 
-![Zapojení tlačítka k PLC. Při log. 1 svítí (kladná logika).](/schemata/button_kladnaLog.png)
+![](schemata/button_kladnaLog.png)
 *Obr. 2: Zapojení tlačítka k PLC. Při log. 1 svítí (kladná logika).*
 
-![Zapojení tlačítka k MCU s pull-down rezistorem (záporná logika).](/schemata/Rpull-down.png)
+![](schemata/Rpull-down.png)
 *Obr. 3: Zapojení tlačítka k MCU s pull-down rezistorem (záporná logika).*
 
-![Zapojení tlačítka k PLC. Při log. 0 svítí (záporná logika).](/schemata/button_zapornaLog.png)
+![](schemata/button_zapornaLog.png)
 *Obr. 4: Zapojení tlačítka k PLC. Při log. 0 svítí (záporná logika).*
 
-Senzory se zapojují v podstatě stejně, jako tlačítka, tedy pin BN (Brown) na Vcc, BU (Blue) na GND a BK a WH na DI. Zakresluje se to ale trochu jinak, viz např. https://www.jmtcontrol.pl/czujnik-indukcyjny-lr18xbf08dpoy#galleryName=productGallery,imageNumber=2
+Senzory se zapojují v podstatě stejně, jako tlačítka, tedy pin BN (Brown) na Vcc, BU (Blue) na GND a BK a WH na DI. Zakresluje se to ale trochu jinak, viz např. 
+![](schemata/Pasted%20image%2020261019060109.png)
+*Obr. 5: Zapojení senzorů [https://vallder.com/wp-content/uploads/2023/03/products-sn04-proximity-sensor-wiring.jpg].*
 
 V praxi se můžeme setkat ještě s dalšími názvy a zkratkami, které se týkají této problematiky.
 Např. 
