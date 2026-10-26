@@ -197,6 +197,21 @@ while True:
 <p>V PLC systémech se debouncing řeší zapojením funkčního bloku zpožděného odpadu <code>TOF</code> s parametrem <code>PT := T#30ms</code>. Vstupem je syrový signál <code>DI</code> a výstupem je stabilizovaný signál bez zákmitů.</p>
 </details>
 
+<details>
+<summary> :sparkles: :bulb: Návrh nápovědy pro MCU a IoT (Debouncing v C++ / Arduino Core): </summary>
+<p>V programování jednočipů v C++ (např. Arduino pro RP2040 nebo ESP32) se stejný časový filtr řeší pomocí <code>millis()</code> bez blokování:</p>
+<pre><code class="language-cpp">if ((millis() - lastDebounceTime) > debounceDelay) {
+    if (reading != buttonState) {
+        buttonState = reading;
+        if (buttonState == LOW) {
+            count++;
+        }
+    }
+}
+</code></pre>
+<p>Základním pravidlem je neblokovat běh procesoru funkcí <code>delay()</code>, aby systém stíhal další úlohy (např. měření senzorů nebo síťovou komunikaci).</p>
+</details>
+
 #### Krok 3 – Vzájemný test a verifikace filtru (5 min)
 Protokol testera (otestujte spolužákův program):
 
@@ -210,7 +225,10 @@ Protokol testera (otestujte spolužákův program):
 
 > :key: **Vysvětlení pojmů a odborné zdroje:**
 > - **Zákmity mechanických kontaktů (Contact Bounce):** Děj způsobený pružností mechanických plíšků kontaktů, kdy dochází k opakovanému rozpojování obvodu s frekvencemi stovek Hz až desítek kHz.
->   GANSEL, Jack. *A Guide to Debouncing*. Online. Ganssle Group, 2004 [cit. 2026-10-14]. Dostupné z: http://www.ganssle.com/debouncing.htm
+> - **Mechanické zákmity vs. Vzorkovací frekvence smyčky:** Pokud mikrokontrolér prochází smyčku s periodou desítek mikrosekund, mechanické sepnutí kontaktu (trvající desítky ms) zachytí jako sérii desítek rychlých náběžných a sestupných hran.
+> - **Softwarový debouncing v MicroPythonu:** Princip časového okna (doba necitlivosti). Proměnná `last_debounce_time` drží časové razítko poslední platné změny. Jakákoli další změna nastalá dříve než za nastavený interval `DEBOUNCE_DELAY_MS` (typicky 20–50 ms) je filtrem ignorována.
+> - **Hardwarový debouncing pro mikrokontroléry:** Zapojení dolnofrekvenčního RC článku přímo před GPIO pin (např. rezistor $10\text{ k}\Omega$ a kondenzátor $100\text{ nF}$ s časovou konstantou $\tau = R \cdot C = 1\text{ ms}$). V kombinaci s vnitřním Schmittovým klopným obvodem pinu RP2040 se hrany vyhladí bez jakéhokoliv softwarového zatížení procesoru.
+>   GANSSLE, Jack. *A Guide to Debouncing* [online]. Baltimore: The Ganssle Group, 2004, rev. 2008 [cit. 2026-10-26]. Dostupné z: http://www.ganssle.com/debouncing.htm
 
 :star2: **Bonusová otázka k úloze 4:**
 Jaké součástky a v jakém zapojení musíte přidat k tlačítku, pokud chcete zákmity odstranit čistě **hardwarovou cestou**, aniž by procesor musel spotřebovávat výpočetní čas na softwarový debouncing?
@@ -308,8 +326,14 @@ while True:
 - Výchozí stav po vyklizení křižovatky: `state =` `...`
 
 <details>
-<summary> :bulb: Nápověda v grafickém jazyce SFC / Grafcet: </summary>
-<p>V normě ČSN EN 61131-3 se tyto úlohy programují v jazyce sekvenčních funkčních diagramů (SFC). Jednotlivé stavy tvoří kroky (Steps) a přechody mezi nimi jsou podmíněny tranzicemi (Transitions) typu <code>t > T#5s</code> nebo <code>Button_Pressed</code>.</p>
+<summary> :bulb: Stavový automat a asynchronní architektura: </summary>
+<p>V programování vestavných systémů a IoT se stavy automatu v MicroPythonu často definují jako celočíselné konstanty namísto textových řetězců, což šetří RAM a zrychluje porovnávání:</p>
+<pre><code class="language-python">S_AUTA_VOLNO = const(0)
+S_AUTA_POZOR = const(1)
+S_CHODCI_VOLNO = const(2)
+S_VYKLIZENI = const(3)
+</code></pre>
+<p>Klíčové je, že v žádném stavu nesmí být použita blokující funkce <code>time.sleep()</code>. Časové přechody jsou řízeny výhradně rozdílem systémového času <code>time.ticks_diff(now, state_start_time)</code>, takže procesor může mezitím kdykoliv zachytit stisk tlačítka chodce nebo odesílat telemetrická data přes Wi-Fi.</p>
 </details>
 
 #### Krok 3 – Protokol vzájemné oponentury (Peer testing) (5 min)
@@ -326,6 +350,8 @@ Tester ověří reakce modelu v simulátoru Wokwi:
 > :key: **Vysvětlení pojmů a odborné zdroje:**
 > - **Konečný stavový automat (Finite State Machine - FSM):** Model diskrétního řízení složený z konečného počtu stavů, přechodů mezi nimi a akcí. Zabraňuje nekonzistentním mezistavům programu.
 >   Konečný automat. In: *Wikipedie: Otevřená encyklopedie* [online]. San Francisco (CA): Wikimedia Foundation, 2024 [cit. 2026-10-14]. Dostupné z: https://cs.wikipedia.org/wiki/Kone%C4%8Dn%C3%BD_automat
+> - **Konečný stavový automat v Embedded systémech:** Způsob strukturování kódu do diskrétních stavů (`state`), v nichž se vykonávají pouze definované akce (např. nastavení výstupů funkcí `set_lights()`). Přechod do dalšího stavu nastává splněním tranzice (časový limit nebo událost z DI).
+> - **Eliminace souběhu (Race Conditions):** Na rozdíl od blokujícího kódu s postupným voláním `sleep()` zaručuje stavový automat deterministické chování – procesor v každém okamžiku přesně ví, v jakém stavu se nachází, a nehrozí uvíznutí při externím podnětu.
 
 :star2: **Bonusová otázka k úloze 5:**
 Jak byste stavový automat rozšířili o noční režim, kdy semafor po obdržení signálu z nadřazeného systému (nebo po uplynutí reálného času z RTC) přejde do stavu trvale blikající žluté s frekvencí 1 Hz?
@@ -422,8 +448,12 @@ while True:
 - Reset časovače překročení teploty: `temp_exceeded_start =` `...`
 
 <details>
-<summary> :bulb: Nápověda v jazyce ST pro PLC: </summary>
-<p>V PLC knihovnách pro regulaci teploty odpovídá tato funkce bloku <code>TON</code>: vstup <code>IN := (CurrentTemp > LimitTemp)</code> a nastavený čas <code>PT := T#6s</code>. Alarmový výstup <code>Alarm := TON.Q</code> sepne až po uplynutí 6 sekund trvalého přehřátí.</p>
+<summary> :bulb: Časová integrace alarmu a IoT telemetrie: </summary>
+<p>V mikrokontrolérech a IoT aplikacích se naměřená hodnota neposílá na cloud (MQTT / REST API) při každém záchvěvu. Kód implementuje dva časovače bez blokování smyčky:</p>
+<ol>
+  <li><strong>Vzorkovací interval (Sample Interval):</strong> Pravidelné čtení hodnoty každé 2 s funkcí <code>time.ticks_diff(now, last_sample_time)</code>.</li>
+  <li><strong>Časová hystereze (Alarm Persistence):</strong> Proměnná <code>temp_exceeded_start</code> zaznamená první okamžik překročení limitu. Teprve po setrvání nad mezí déle než 6 s se rozsvítí indikační LED a odešle se varovná zpráva (např. MQTT zpráva do Home Assistantu). Pokud teplota klesne dříve, časovač se resetuje na <code>None</code>.</li>
+</ol>
 </details>
 
 #### Krok 3 – Protokol vzájemného přezkoušení (Peer testing) (5 min)
@@ -437,7 +467,10 @@ Tester otestuje funkčnost v simulátoru Wokwi (kde lze kliknutím na DS18B20 pl
 
 > :key: **Vysvětlení pojmů a odborné zdroje:**
 > - **Sběrnice 1-Wire:** Průmyslová asynchronní sběrnice vyvinutá firmou Dallas Semiconductor (nyní Analog Devices). Komunikuje po jediném datovém vodiči a zemi, každé zařízení má celosvětově unikátní 64bitové sériové číslo (ROM kód).
->   ANALOG DEVICES. *DS18B20: Programmable Resolution 1-Wire Digital Thermometer Data Sheet* [online]. Rev. 6. Norwood: Analog Devices, 2019 [cit. 2026-10-14]. Dostupné z: https://www.analog.com/media/en/technical-documentation/data-sheets/DS18B20.pdf
+> - **Knihovní moduly `onewire` a `ds18x20`:** V MicroPythonu tvoří dvě vrstvy – `onewire` řídí přesné mikrosekundové časování bitů po sběrnici (bit-banging), zatímco `ds18x20` poskytuje vysokoúrovňové metody pro čtení teplotních datových registrů.
+> - **Topologie sběrnice s otevřeným drainem (Open-Drain):** Pin čidla DS18B20 aktivně stahuje linku pouze k zemi (GND). Logickou úroveň 1 zajišťuje externí pull-up rezistor $4{,}7\text{ k}\Omega$ připojený na 3,3 V. Bez tohoto rezistoru zůstává linka trvale na nulovém napětí a komunikace selže.
+> - **Metoda `.convert_temp()` a doba převodu:** Odesílá všem čidlům příkaz ke spuštění interního převodu. Při 12bitovém rozlišení potřebuje integrovaný Sigma-Delta A/D převodník v senzoru dobu až 750 ms, teprve poté lze číst platná data metodou `.read_temp(rom)`.
+>   ANALOG DEVICES. *DS18B20: Programmable Resolution 1-Wire Digital Thermometer* [online]. Rev. 6. Norwood (MA): Analog Devices, 2019 [cit. 2026-10-26]. Dostupné z: https://www.analog.com/media/en/technical-documentation/data-sheets/DS18B20.pdf
 
 :star2: **Bonusová otázka k úloze 6:**
 Proč vyžaduje převod teploty v senzoru DS18B20 při maximálním rozlišení 12 bitů dobu až 750 ms, zatímco čtení digitálních dat po sběrnici trvá jen několik milisekund? Jaký fyzikální princip převodníku čip uvnitř využívá?
@@ -451,5 +484,6 @@ Proč vyžaduje převod teploty v senzoru DS18B20 při maximálním rozlišení 
 
 
 
-
+ :sparkles:
+  :sparkles: :sparkles:
 
