@@ -1,8 +1,8 @@
 ## Úlohy k MCU
 
 
-> <mark>🔴U klasifikovaných úloh nejde jen o jejich vypracování, ale především o pochopení programu a seznámení se s pojmy.</mark>
-> U úloh můžete vypracovat bonusové otázky i případně si zadání rozšířit a poupravit.
+> <mark>U klasifikovaných úloh nejde jen o jejich vypracování, ale především o pochopení programu a seznámení se s pojmy.</mark>
+> U úloh můžete vypracovat bonusové otázky i případně si zadání rozšířit a poupravit. Nezapomeňte si pak říct o odměnu.
 
 ### 3. Digitální vstup a neblokující řízení LED na MCU (průvodce)
 
@@ -480,10 +480,4 @@ Proč vyžaduje převod teploty v senzoru DS18B20 při maximálním rozlišení 
 
 ---
 
-
-
-
-
- :sparkles:
-  :sparkles: :sparkles:
 
